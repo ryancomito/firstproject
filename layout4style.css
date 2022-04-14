@@ -4,9 +4,17 @@
 
 .container{
     border: 3px solid lightgray;
-    padding: 24px 24px 0 24px;
+    padding: 80px 24px;
+}
+
+.row {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto -24px auto;
+    /* offsets margin set within box class - allows for even padding to be set on container */
     display: flex;
     justify-content: space-between;
+    /* parent element changes, therefore display: flex; must move to new parent */
 }
 
 .box {
