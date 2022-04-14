@@ -7,6 +7,11 @@
     padding: 24px 24px 0 24px;
 }
 
+.row {
+    width: 100%;
+    max-width: 400px;
+}
+
 .title {
     border: 3px solid lightgray;
     width: 100%;
