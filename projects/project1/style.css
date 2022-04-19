@@ -29,6 +29,24 @@ header {
   align-items: center;
 }
 
+h1 {
+  font-size: 72px;
+}
+
+.subheader {
+  font-size: 36px;
+  margin: 16px 0 24px 0;
+}
+
+button {
+  background-color: #05c7cf;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 .nav-links {
   display: flex;
   justify-content: space-between;
@@ -43,4 +61,129 @@ a {
   color: black;
   font-size: 24px;
   font-weight: 700;
+}
+
+.row {
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+#about,
+#discord,
+#contact,
+footer {
+  padding: 48px 0;
+}
+
+#about {
+  background-color: #f8ffdc;
+}
+
+h2 {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section__description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__image--wrapper {
+  width: 40%;
+}
+
+img {
+  width: 100%;
+}
+
+.section__description--wrapper {
+  width: 60%;
+}
+
+.about__image--wrapper, 
+.section__description--wrapper {
+  padding: 0 24px;
+}
+
+.section__description--paragraph {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+#discord {
+  background-color: #cefeff;
+}
+
+#contact {
+  background-color: #dce9ff;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+input,
+textarea {
+  margin-bottom: 24px;
+  font-size: 20px;
+  padding: 6px 12px;
+}
+
+footer {
+  background-color: #aaf5ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo {
+  max-width: 400px;
+  margin-bottom: 16px;
+}
+
+.footer__links {
+  margin-bottom: 32px;
+}
+
+.footer__link {
+  padding: 0 16px;
+}
+
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 728px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .home__description {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .subheader {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .home__description--button {
+    max-width: 240px;
+  }
 }

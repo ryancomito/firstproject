@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
+
 <body>
   <section>
     <nav class="container">
@@ -18,35 +19,50 @@
       </ul>
     </nav>
     <header>
-      <div>
-        <h1>Best place to learn frontend</h1>
-        <p><p>Go from being an absolute beginner to being a pro with a simplified process</p></p>
+      <div class="row">
+        <div class="home__description">
+          <h1>Best place to learn frontend</h1>
+          <p class="subheader">Go from being an absolute beginner to being a pro with a simplified process</p>
+          <button class="home__description--button">Start now</button>
+        </div>
+        <figure>
+          <img src="laptop.png" alt="Home page image">
+        </figure>
       </div>
-      <figure>
-        <img src="laptop.png" alt="Home page image">
-      </figure>
     </header>
   </section>
+
   <main>
     <section id="about">
       <h2>About</h2>
-      <div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut a fugiat quaerat in soluta amet, porro suscipit officiis quas repudiandae sint ad aperiam tenetur, ullam, hic corporis tempora doloribus cupiditate?</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut a fugiat quaerat in soluta amet, porro suscipit officiis quas repudiandae sint ad aperiam tenetur, ullam, hic corporis tempora doloribus cupiditate?</p>
+      <div class="row">
+        <div class="section__description">
+          <div class="section__description--wrapper">
+            <div>
+              <p class="section__description--paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut a fugiat quaerat in soluta amet, porro suscipit officiis quas repudiandae sint ad aperiam tenetur, ullam, hic corporis tempora doloribus cupiditate?</p>
+              <p class="section__description--paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut a fugiat quaerat in soluta amet, porro suscipit officiis quas repudiandae sint ad aperiam tenetur, ullam, hic corporis tempora doloribus cupiditate?</p>
+            </div>
+          </div>
+          <figure class="about__image--wrapper">
+            <img src="about.jpg" alt="">
+          </figure>
+        </div>
       </div>
-      <figure>
-        <img src="about.jpg" alt="">
-      </figure>
+      
     </section>
     <section id="discord">
       <h2>Discord</h2>
-      <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit, atque maiores sequi accusamus odio eaque aliquam labore, quibusdam nostrum doloremque facilis nemo obcaecati, ea rem totam illum veniam aliquid!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, numquam consequatur ducimus sed eius quibusdam mollitia possimus, nihil culpa officiis incidunt deserunt delectus quod a nam quia praesentium id amet.</p>
+      <div class="row">
+        <div class="section__description">
+          <figure class="about__image--wrapper">
+            <img src="discord.png" alt="Discord logo">
+          </figure>
+          <div class="section__description--wrapper">
+            <p class="section__description--paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit, atque maiores sequi accusamus odio eaque aliquam labore, quibusdam nostrum doloremque facilis nemo obcaecati, ea rem totam illum veniam aliquid!</p>
+            <p class="section__description--paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio, numquam consequatur ducimus sed eius quibusdam mollitia possimus, nihil culpa officiis incidunt deserunt delectus quod a nam quia praesentium id amet.</p>
+          </div>
+        </div>
       </div>
-      <figure>
-        <img src="discord.png" alt="Discord logo">
-      </figure>
     </section>
     <section id="contact">
       <h2>Contact</h2>
@@ -54,18 +70,18 @@
         <span>Email</span>
         <input type="email" placeholder="jane@example.com">
         <span>Message</span>
-        <textarea type=""text></textarea>
-        <input type="submit">
+        <textarea type="text" placeholder="Let's get connected!"></textarea>
+        <button>Contact us!</button>
       </form>
     </section>
   </main>
   <footer>
-    <img src="FES.svg" alt="">
-    <div>
-      <a href="#about">About</a>
-      <a href="#discord">Discord</a>
-      <a href="#contact">Contact</a>
-      <a href="">Courses</a>
+    <img src="FES.svg" alt="" class="footer__logo">
+    <div class="footer__links">
+      <a class="footer__link" href="#about">About</a>
+      <a class="footer__link" href="#discord">Discord</a>
+      <a class="footer__link" href="#contact">Contact</a>
+      <a class="footer__link" href="">Courses</a>
     </div>
     <p>Copyright</p>
   </footer>
