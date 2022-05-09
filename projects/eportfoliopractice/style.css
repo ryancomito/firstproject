@@ -17,12 +17,18 @@ p {
   font-size: 1rem;
 }
 
-.nav--wrapper {
+.nav__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
   border: 1px solid black;
+}
+
+.personal__logo {
+  color: blueviolet;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 ul {
@@ -31,7 +37,38 @@ ul {
 }
 
 li {
-  margin: 0 1.75rem;
+  margin: 0 1.2rem;
   border-radius: 30%;
-  padding: 8px;
+}
+
+a {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  padding: 2px 8px;
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  scroll-behavior: smooth;
+}
+
+#languageButton, #projectsButton {
+  color: blueviolet;
+  background-color: whitesmoke;
+  transition: 0.15s;
+}
+
+#languageButton:hover, #projectsButton:hover {
+  background-color: blueviolet;
+  color: whitesmoke;
+}
+
+#contactButton {
+  background-color: blueviolet;
+  color: whitesmoke;
+  transition: 0.15s;
+}
+
+#contactButton:hover {
+  background-color: whitesmoke;
+  color: blueviolet;
 }
