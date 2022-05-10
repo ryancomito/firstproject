@@ -22,10 +22,9 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  border: 1px solid black;
 }
 
-.personal__logo {
+.personal-logo {
   color: blueviolet;
   font-size: 2.5rem;
   font-weight: 700;
@@ -63,7 +62,7 @@ a {
 }
 
 #contactButton {
-  background-color: blueviolet;
+  background-color: #8a2be2;
   color: whitesmoke;
   transition: 0.15s;
 }
@@ -71,4 +70,12 @@ a {
 #contactButton:hover {
   background-color: whitesmoke;
   color: blueviolet;
+}
+
+.about-me__wrapper {
+  height: 86.326vh;
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
