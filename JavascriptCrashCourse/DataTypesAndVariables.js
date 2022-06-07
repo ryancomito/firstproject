@@ -19,6 +19,19 @@ a = 2;
 
 //Declare and assign (initialise) variables:
 var b = 7;
+console.log(b);
 
 //Seeing things in the consol
 console.log(a);
+
+//Incrementing numbers, can do ++ or --
+b++;
+console.log(b);
+
+// Remainders
+var remainder;
+remainder = 11 % 3;
+console.log(remainder);
+
+// Using += to assign new variable after math operation
+a += 7;
