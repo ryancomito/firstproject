@@ -75,4 +75,54 @@ console.log(firstLetterOfFirstName);
 var lastLetterOfFirstName = firstName[firstNameLength - 1];
 console.log(lastLetterOfFirstName);
 
-//
+//Word Blanks (?) - using functions
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+  var result = "";
+  result += "The " + myAdjective + " " + myNoun + " " + myAdverb + " to the store.";
+  return result;
+}
+console.log(wordBlanks("cat", "cute", "house", "flew"))
+
+// Arrays
+var ourArray = ["Ryan", 23];
+console.log(ourArray);
+
+// Nested array
+var myArray = ["Boo!", [1,2,3]]
+console.log(myArray);
+
+// Accessing array data with []
+var arrayItemOne = myArray[0];
+console.log(arrayItemOne);
+
+// Modifying array data
+var newArray = [12,24,36];
+newArray[2] = 48;
+console.log(newArray);
+
+// Multidimensional arrays (3D oobjects)
+var threeDimensionArray = [[1,2,3], [4,5,6], [[7,8,9], 10,11]];
+console.log(threeDimensionArray[2][0][1]); // accessing the 789 array
+
+// Adding to arrays with push()
+  // Adds an element to the end of the array
+var myArrayAgain = ["Homer", "Simpson"];
+myArrayAgain.push("Marge", "Lisa"); // can add individual items or nest arrays
+console.log(myArrayAgain);
+
+// Manipulating arrays with pop() (also returns the value?)
+  // Removes the last element
+  // Can be used to remove items from selections after being picke
+  // Random picker removes item kinda thing
+myArrayAgain.pop(); //can also set this to a variable
+console.log(myArrayAgain);
+
+// Manipulate arrays with shift()
+  // Removes the first element
+myArrayAgain.shift();
+console.log(myArrayAgain);
+
+// Manipulate arrays with unshift()
+  // Adds element to the beginning of the array
+myArrayAgain.unshift("Bart");
+console.log(myArrayAgain);
