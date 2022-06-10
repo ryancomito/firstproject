@@ -69,3 +69,6 @@ console.log(nextInLine(testArray, 6));
 console.log("After: " + JSON.stringify(testArray));
 
 // Booleans - true or false values
+function welcomeToBooleans () {
+  return true;
+}
