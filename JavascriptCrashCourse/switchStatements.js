@@ -41,7 +41,7 @@ console.log(caseInSwitch(2));
     }
     return answer;
   }
-  console.log(switchOfStuff(a));
+  console.log(switchOfStuff("a"));
 
   // Multiple cases having the same consequence
     // Omit the break statement and code until the final case
