@@ -63,3 +63,14 @@ for (let i = 0; i < arr.length; i++) {
 }
 var product = multiplyAll([[1,2],[3,4],[5,6,7]])
 console.log(product);
+
+// Do While loops
+var newArray = [];
+var i = 10;
+
+do {
+  newArray.push(i);
+  i++;
+} while (i < 5);
+
+console.log(i, newArray);

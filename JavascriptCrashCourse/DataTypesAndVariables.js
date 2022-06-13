@@ -126,3 +126,5 @@ console.log(myArrayAgain);
   // Adds element to the beginning of the array
 myArrayAgain.unshift("Bart");
 console.log(myArrayAgain);
+
+// Comparing let vs const vs var
