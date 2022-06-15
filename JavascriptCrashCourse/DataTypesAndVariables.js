@@ -100,7 +100,7 @@ var newArray = [12,24,36];
 newArray[2] = 48;
 console.log(newArray);
 
-// Multidimensional arrays (3D oobjects)
+// Multidimensional arrays (3D objects)
 var threeDimensionArray = [[1,2,3], [4,5,6], [[7,8,9], 10,11]];
 console.log(threeDimensionArray[2][0][1]); // accessing the 789 array
 
@@ -113,7 +113,7 @@ console.log(myArrayAgain);
 // Manipulating arrays with pop() (also returns the value?)
   // Removes the last element
   // Can be used to remove items from selections after being picke
-  // Random picker removes item kinda thing
+    // Random picker removes item kinda thing
 myArrayAgain.pop(); //can also set this to a variable
 console.log(myArrayAgain);
 
@@ -126,6 +126,22 @@ console.log(myArrayAgain);
   // Adds element to the beginning of the array
 myArrayAgain.unshift("Bart");
 console.log(myArrayAgain);
+
+// Converting a string to an array
+array.split('');
+
+// Reversing an array
+array.reverse();
+
+// Converting an array to a string
+array.join('');
+
+// Array.fill(x) - fills an array with x
+Array(array.length).fill(x);
+
+// Array.map - maps changes to an array
+return array.map(elem => elem * 2); // just an example, can be anything
+
 
 // Comparing let vs const vs var!
   // let does not let you declare a variable twice

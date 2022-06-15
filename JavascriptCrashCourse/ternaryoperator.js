@@ -1,4 +1,5 @@
 // Ternary operators
+  // used for boolean scenarios but without boolean returns
   //condition ? statement-if-true : statement-if-false;
 
 function checkEqual(a, b) {
