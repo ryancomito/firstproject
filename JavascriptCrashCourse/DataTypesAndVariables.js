@@ -175,3 +175,15 @@ function freezeObj() {
 }
 const PI = freezeObj();
 
+// Object literals
+/* 
+const createPerson1 = (name, age, gender) => {
+  return {
+    name: name,
+    age: age,
+    gender: gender
+  };
+};
+  The above code can also be written as below, significantly shorter and more concise */
+const createPerson = (name, age, gender) => ({name, age, gender});
+console.log(createPerson("Ryan Comito", 22, "male"));

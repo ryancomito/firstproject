@@ -216,3 +216,81 @@ const half = (function() {
 })();
 console.log(stats);
 console.log(half(stats));
+
+// Writing declarative functions within objects
+  // Do not have to use function keyword
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    this.gear = newGear;
+  }
+};
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+// Create objects using CLASS
+/* Old way
+var spaceShuttle = function (targetPlanet) {
+  this.targetPlanet = targetPlanet;
+}
+var zeus = new spaceShuttle("Jupiter");
+console.log(zeus.targetPlanet) */
+
+class spaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+  }
+};
+var zeus = new spaceShuttle("Jupiter");
+console.log(zeus.targetPlanet)
+
+function makeClass() {
+  class Vegetable {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+  return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable("carrot");
+console.log(carrot.name);
+
+// Class objects:
+  // Getters and setters
+class Book {
+  constructor(author) {
+    this._author = author; //_ signifies privacy
+  }
+  //getter
+    // returns value of an objects private variable without accessing it
+  get writer(){
+    return this._author;
+  }
+  //setter
+    // never interacting with _author but you are able to set it
+  set writer(updatedAuthor){
+    this._author = updatedAuthor;
+  }
+}
+
+function makeClass2() {
+  class Thermostat {
+    constructor(temp) {
+      this._temp = 5/9 * (temp-32);
+    }
+    get temperature(){
+      return this._temp;
+    }
+    set temperature(updatedTemp){
+      this._temp = updatedTemp;
+    }
+  }
+  return Thermostat;
+}
+const Thermostat = makeClass2();
+const thermos = new Thermostat(76);
+let temp = thermos.temperature;
+thermos.temperature = 26;
+temp = thermos.temperature;
+console.log(temp)
