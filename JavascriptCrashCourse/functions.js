@@ -119,3 +119,100 @@ const increment = (function(){
 
 console.log(increment(5, 2));
 console.log(increment(5));
+
+// Rest operator
+const sum = (function() {
+  return function sum(...args) {
+    // const args = [x, y, z]; the "...args" will allow all the numbers passed into the function to be converted into an array called args
+    return args.reduce((a, b) => a + b, 0);
+  };
+})();
+console.log(sum(1, 2, 3));
+
+// Spread operator
+const arr1 = ["Jan", "Feb", "Mar"];
+let arr2;
+(function () {
+  arr2 = [...arr1]; // will make arr2 a copy of arr1, not equal to
+  arr1[0] = "potato";
+})();
+console.log(arr2);
+
+// Destructuring assignment
+var voxel = {x: 3.6, y:7.4, z: 6.54};
+
+var x = voxel.x;
+var y = voxel.y;
+var z = voxel.z; // old way of doing it
+
+  // Destructuring - new way
+
+var { x : i, y : j, z : k} = voxel; // i = 3.6, j = 7.4, k = 6.54
+
+const AVG_TEMPERATURES = {
+  today: 77.5,
+  tomorrow: 79
+};
+
+function getTempOfTmrw(avgTemperatures) {
+  "use strict";
+
+  const {tomorrow:tempOfTomorrow} = avgTemperatures;
+
+  return tempOfTomorrow;
+};
+
+console.log(getTempOfTmrw(AVG_TEMPERATURES));
+
+// Destructuring in nested objects
+const LOCAL_FORECAST = {
+  today: {min: 72, max: 83},
+  tomorrow: {min: 73.3, max: 84.6}
+};
+
+function getMaxOfTmrw(forecast) {
+  "use strict";
+  const {tomorrow: {max: maxOfTomorrow}} = forecast;
+  return maxOfTomorrow;
+}
+console.log(getMaxOfTmrw(LOCAL_FORECAST));
+
+// Destructuring assignment to assign variables from arrays
+var [z, x, , y] = [1, 2, 3, 4, 5, 6];
+console.log(z, x, y);
+
+let a1 = 8, b1 = 6;
+(() => {
+  "use strict";
+  [a1, b1] = [b1, a1];
+})();
+console.log(a1);
+console.log(b1);
+
+// Destructuring with the rest operator
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  const [, , ...arr] = list;
+  return arr;
+}
+const arr = removeFirstTwo(source);
+console.log(arr);
+console.log(source);
+
+// Destructuring assingments and function parameters
+const stats = {
+  max: 56.78,
+  std: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+const half = (function() {
+  return function half({max, min}) { // use destructuring instead of inputting entire object
+    return (max + min) / 2; //because only the destructured data has been inputted, there is no need to do stats.max and stats.min
+  };
+})();
+console.log(stats);
+console.log(half(stats));
