@@ -140,8 +140,11 @@ array.join('');
 Array(array.length).fill(x);
 
 // Array.map - maps changes to an array
-return array.map(elem => elem * 2); // just an example, can be anything
+return array.map(elem => elem * x);
 
+// Array.filter - allows for filtering of arrays under a condition "x"
+array.filter(elem => elem !== x);
+array.filter(elem => elem === x);
 
 // Comparing let vs const vs var!
   // let does not let you declare a variable twice

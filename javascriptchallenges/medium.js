@@ -113,9 +113,56 @@ const convertToZero3 = (a) => {
 console.log(convertToZero3([1,2,3,4,5,6,7,8]))
 
 // Question 10 - filter out a certain string
+  // Solution 1 - for loop
+const removeApples1 = (array) => {
+  let newArray = [];
+  for (i = 0; i < array.length; i++) {
+    if (array[i] !== "apple"){
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
+}
+console.log(removeApples1(["apple", "banana", "orange"]))
 
+  // Solution 2 - array.filter
+const removeApples2 = (array) => {
+  return array.filter(elem => elem !== "apple");
+}
+console.log(removeApples2(["apple", "banana", "orange"]));
 
-// Question  11 - 
+// Question  11 - filter out falsy values
+  // Solution 1 - for loop
+const filterOutFalsyValues1 = (arr) => {
+  let newArray = [];
+  for (i = 0; i < arr.length; i++) {
+    if (!!arr[i] === true) {
+      newArray.push(arr[i]);
+    }
+  }
+  return newArray;
+}
+console.log(filterOutFalsyValues1(["",[],0,null,undefined,"0",500]))
 
+  //Solution 2 - array.filter
+const filterOutFalsyValues2 = (arr) => {
+  return arr.filter(elem => !!elem === true);
+}
+console.log(filterOutFalsyValues2(["",[],0,null,undefined,"0",500]))
 
-// Question 12 - 
+// Question 12 - return boolean values in an array
+  // Can be done easily with array.map
+const convertToBoolean1 = (arr) => {
+  return arr.map(elem => !!elem);
+}
+console.log(convertToBoolean1(["",[],0,null,undefined,"0",500]))
+
+  // Can do in a for loop
+const convertToBoolean2 = (arr) => {
+  let newArray = [];
+  for (i = 0; i < arr.length; i++) {
+    newArray.push(!!arr[i]);
+  }
+  return newArray;
+}
+console.log(convertToBoolean2(["",[],0,null,undefined,"0",500]))
